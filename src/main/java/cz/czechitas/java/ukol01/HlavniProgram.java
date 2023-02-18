@@ -9,78 +9,63 @@ public class HlavniProgram {
 
         //TODO implementace domácího úkolu
         //prasato
-
-        zofka.move(100);
-        zofka.turnRight(90);
-        zofka.move(150);
-        zofka.turnRight(90);
-        zofka.move(100);
-        zofka.turnRight(90);
-        zofka.move(150);
-        //trojuhel
-        zofka.turnRight(45);
-        zofka.move(70.7);
-        zofka.turnRight(90);
-        zofka.move(70.7);
-
+        zofka.setLocation(450,350);
+        nakresliDomecek(zofka);
         zofka.turnRight(135);
-        zofka.move(100);
-        //nohy
+        zofka.move(80);
 
-        zofka.turnRight(35);
-        zofka.move(50);
-        zofka.turnLeft(125);
+        predniNohy(zofka);
+
         zofka.penUp();
-        zofka.move(60);
-        zofka.turnLeft(125);
+        zofka.turnRight(180);
+        zofka.move(40);
+
+        zofka.turnRight(50);
+        zofka.move(118);
+
         zofka.penDown();
-        zofka.move(50);
+        zadniNohy(zofka);
+    }
 
-        zofka.turnRight(125);
-        zofka.move(150);
-        // druha noha
-        zofka.turnRight(125);
-        zofka.move(50);
-        zofka.turnLeft(125);
-        zofka.penUp();
-        zofka.move(60);
-        zofka.turnLeft(125);
-        zofka.penDown();
-        zofka.move(50);
-
-
-
-
-
-
-
-        /*private void nakresliPrasatko(){
-            for (int i = 0; i < 2; i++) {
-                zofka.move(100);
-                zofka.turnRight(90);
-                zofka.move(150);
-            }
+        public static void main (String[]args){
+            new HlavniProgram().start();
         }
 
-     private void nakresliNohy(){
-                    for (int j = 0; j < 2; j++) {
+    private void nakresliDomecek(Turtle zofka) {
+        for (int i = 0; i < 2; i++) {
+            zofka.move(80);
+            zofka.turnRight(90);
+            zofka.move(120);
+            zofka.turnRight(90);
+        }
+        zofka.turnLeft(45);
+        zofka.move(56.6);
+        zofka.turnRight(90);
+        zofka.move(56.6);
 
-                    }
-                }*/
+        }
+        private void predniNohy(Turtle zofka){
+            zofka.turnLeft(35);
+            zofka.move(40);
 
+            zofka.turnRight(180);
+            zofka.move(40);
+            zofka.turnLeft(105);
+            zofka.move(40);
 
+        }
+        private void zadniNohy(Turtle zofka){
+            zofka.turnRight(55);
+            zofka.move(40);
 
+            zofka.turnRight(180);
+            zofka.move(40);
+            zofka.turnLeft(105);
+            zofka.move(40);
 
-
-
-
-
+        }
     }
 
 
 
-    public static void main(String[] args) {
-        new HlavniProgram().start();
-    }
 
-}
