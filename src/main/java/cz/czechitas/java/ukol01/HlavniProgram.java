@@ -9,7 +9,7 @@ public class HlavniProgram {
 
         //TODO implementace domácího úkolu
         //prasato
-        zofka.setLocation(450,350);
+        zofka.setLocation(600,600);
         nakresliDomecek(zofka);
         zofka.turnRight(135);
         zofka.move(80);
@@ -27,8 +27,27 @@ public class HlavniProgram {
         zadniNohy(zofka);
 
         // slunko
-        zofka.setLocation(100, 110);
+        zofka.setLocation(150, 120);
+        /*osmiuhelnik(zofka);
+        kolecko(zofka);*/
         nakresliSlunko(zofka);
+
+        // DOMY
+        zofka.setLocation(120, 240);
+        zofka.turnLeft(130);
+        for (int i = 0; i < 5; i++) {
+            nakresliDomecek(zofka);
+        zofka.turnLeft(45);
+            udelejMezeru(zofka);
+       }
+        zofka.setLocation(120, 480);
+        nakresliDomecek(zofka);
+
+        zofka.setLocation(1040, 480);
+        zofka.turnLeft(45);
+        nakresliDomecek(zofka);
+
+
 
 
 
@@ -97,6 +116,14 @@ public class HlavniProgram {
                 zofka.move(30);
                 zofka.turnLeft(90);}
         }
+
+    }
+    private void udelejMezeru (Turtle zofka){
+        zofka.penUp();
+        //zofka.turnLeft(90);
+        zofka.move(150);
+        zofka.penDown();
+
     }
 }
 
