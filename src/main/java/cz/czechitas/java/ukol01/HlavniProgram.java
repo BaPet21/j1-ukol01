@@ -25,6 +25,14 @@ public class HlavniProgram {
 
         zofka.penDown();
         zadniNohy(zofka);
+
+        // slunko
+        zofka.setLocation(100, 110);
+        nakresliSlunko(zofka);
+
+
+
+
     }
 
         public static void main (String[]args){
@@ -64,7 +72,33 @@ public class HlavniProgram {
             zofka.move(40);
 
         }
+    private void osmiuhelnik (Turtle zofka){
+        for (int i = 0; i < 8; i++) {
+            zofka.turnRight(45);
+            zofka.move(50);}
+
     }
+
+    private void kolecko (Turtle zofka){
+        for (int i = 0; i < 20; i++) {
+            zofka.turnRight(25);
+            zofka.move(20);
+        }
+
+    }
+    private void nakresliSlunko (Turtle zofka){
+        for (int i = 0; i < 24; i++) {
+            zofka.turnRight(15);
+            zofka.move(10);
+            if (i%2==0){
+                zofka.turnLeft(90);
+                zofka.move(30);
+                zofka.turnRight(180);
+                zofka.move(30);
+                zofka.turnLeft(90);}
+        }
+    }
+}
 
 
 
