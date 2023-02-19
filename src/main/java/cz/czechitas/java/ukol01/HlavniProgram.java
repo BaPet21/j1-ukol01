@@ -50,7 +50,7 @@ public class HlavniProgram {
         // jmeno
         zofka.setLocation(180, 730);
         zofka.turnLeft(135);
-       pismenoP(zofka);
+        pismenoP(zofka);
         zofka.setLocation(360, 730);
         zofka.turnRight(110);
         pismenoE(zofka);
